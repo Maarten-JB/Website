@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#top-bar{
+    display: inline-block;
+    height: 5vw;
+    width: 100vw;
+    position: fixed;
+    top: 20px;
+}
+
+#icon{
+    background-color: darkgreen;
+    display: inline-block;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 100%;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#nav-bar{
+    background-color: darkgreen;
+    display: inline-block;
+    height: 4vw;
+    width: 80vw;
+    border-radius: 50px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#landing {
+  background-color: burlywood;
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+}
+
+#content {
+  background-color: blueviolet;
+  display: inline-block;
+  height: 1000px;
+  width: 100vw;
+}
+
+#footer {
+  background-color: brown;
+  display: inline-block;
+  height: 100px;
+  width: 100vw;
+}
