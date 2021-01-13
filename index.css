@@ -1,38 +1,108 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
 }
 
-#top-bar{
-    display: inline-block;
-    height: 5vw;
-    width: 100vw;
-    position: fixed;
-    top: 20px;
+#top-bar {
+  display: inline-block;
+  width: 100vw;
+  position: fixed;
+  top: 60px;
 }
 
-#icon{
-    background-color: darkgreen;
-    display: inline-block;
-    height: 5vw;
-    width: 5vw;
-    border-radius: 100%;
-    position: absolute;
-    left: 40px;
-    top: 50%;
-    transform: translate(0,-50%);
+#top-bar div,
+#top-bar a {
+  transition-delay: 1s;
 }
 
-#nav-bar{
-    background-color: darkgreen;
-    display: inline-block;
-    height: 4vw;
-    width: 80vw;
-    border-radius: 50px;
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translate(0,-50%);
+#icon {
+  background-color: darkgreen;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: width 1s;
+
+  overflow: hidden;
+}
+
+#icon:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition: width 0.5s;
+  transition-delay: 0.2s;
+  transition-timing-function: ease;
+}
+
+#icon_img {
+  display: inline-block;
+  background-image: url("images/AvatarMaker.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+#icon:hover #icon_img {
+  height: 60px;
+  width: 60px;
+  transform: translate(5px, -50%);
+  transition: all 0.3s;
+}
+
+#icon_log {
+  text-decoration: none;
+  line-height: 18px;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(5px, -50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+}
+
+#icon:hover #icon_log {
+  opacity: 1;
+  transition: opacity 0.5s;
+  transition-delay: 0.4s;
+}
+
+#icon_log:hover {
+  color: rgb(12, 77, 77);
+  transition: all 0.5s;
+}
+
+#nav-bar {
+  background-color: darkgreen;
+  display: inline-block;
+  height: 50px;
+  width: auto;
+  border-radius: 50px;
+  position: absolute;
+  left: 300px;
+  right: 60px;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 #landing {
@@ -40,6 +110,33 @@ body {
   display: inline-block;
   height: 100vh;
   width: 100vw;
+}
+
+#explore_button {
+  background-color: brown;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  height: 60px;
+  width: 150px;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+#explore_button:hover{
+  height: 80px;
+  width: 170px;
+  transform: translate(-50%, 10px);
+  background-image: url(images/flowers.jpg);
+  transition: all 0.5s;
 }
 
 #content {
