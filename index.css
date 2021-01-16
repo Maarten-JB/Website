@@ -1,38 +1,175 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
   overflow-x: hidden;
+  margin: 0;
 }
 
-#top-bar{
-    display: inline-block;
-    height: 5vw;
-    width: 100vw;
-    position: fixed;
-    top: 20px;
+#top-bar {
+  display: inline-block;
+  width: 100vw;
+  position: fixed;
+  top: 60px;
 }
 
-#icon{
-    background-color: darkgreen;
-    display: inline-block;
-    height: 5vw;
-    width: 5vw;
-    border-radius: 100%;
-    position: absolute;
-    left: 40px;
-    top: 50%;
-    transform: translate(0,-50%);
+#top-bar div,
+#top-bar a {
+  transition-delay: 0.1s;
 }
 
-#nav-bar{
-    background-color: darkgreen;
-    display: inline-block;
-    height: 4vw;
-    width: 80vw;
-    border-radius: 50px;
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translate(0,-50%);
+#logo {
+  background-color: aqua;
+  display: inline-block;
+  width: auto;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translate(0, -50%);
+  text-decoration: none;
+}
+
+#logo ul {
+  display: flex;
+  margin-left: 14px;
+  margin-right: 7px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#logo_top {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+#logo_bottom {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+
+#logo ul li {
+  display: inline;
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+#logo ul li:nth-child(even) {
+  display: none;
+}
+
+#logo:hover ul li:nth-child(odd) {
+  margin: 0;
+}
+
+#logo:hover ul li:nth-child(even) {
+  display: inline;
+}
+
+#icon {
+  background-color: darkgreen;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  overflow: hidden;
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: width 1s;
+}
+
+#icon:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition: width 0.5s;
+  transition-delay: 0.2s;
+  transition-timing-function: ease;
+}
+
+#icon_img {
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  background-image: url("images/AvatarMaker.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+#icon:hover #icon_img {
+  height: 60px;
+  width: 60px;
+  transform: translate(-5px, -50%);
+  transition: all 0.3s;
+}
+
+#icon_log {
+  display: inline-block;
+  position: absolute;
+  left: 17%;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-decoration: none;
+  line-height: 18px;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  opacity: 0;
+  color: white;
+  z-index: 0;
+  transition: opacity 0.5s;
+}
+
+#icon:hover #icon_log {
+  opacity: 1;
+  transition: opacity 0.5s;
+  transition-delay: 0.4s;
+}
+
+#icon_log:hover {
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+
+#nav-bar {
+  background-color: darkgreen;
+  display: inline-block;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  left: 300px;
+  right: 230px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#nav-bar ul {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 100px;
+  transform: translate(0, -50%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#nav-bar li {
+  display: inline;
+  margin: auto;
+}
+
+#nav-bar a{
+  text-decoration: none;
 }
 
 #landing {
@@ -40,6 +177,76 @@ body {
   display: inline-block;
   height: 100vh;
   width: 100vw;
+}
+
+#explore-button {
+  background-color: aqua;
+  display: inline-block;
+  height: 70px;
+  width: 150px;
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translate(-50%, 50%);
+  transition: all 0.5s;
+}
+
+#explore-button:hover {
+  height: 90px;
+  width: 170px;
+  transition: all 0.5s;
+}
+
+#explore-button_img {
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/flowers.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#explore-button_text {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+}
+
+#explore-button:hover #explore-button_img {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#motivation {
+  background-color: blueviolet;
+  display: inline-block;
+  border-radius: 25px;
+  height: 350px;
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  right: 40%;
+}
+
+#showroom {
+  background-color: blue;
+  display: inline-block;
+  height: 350px;
+  border-radius: 25px;
+  position: absolute;
+  top: 120px;
+  left: 70%;
+  right: 60px;
 }
 
 #content {
